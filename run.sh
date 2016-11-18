@@ -3,7 +3,7 @@ run_test()
 {
   echo "Running test $3..."
   ./run_test.py $1 $2 output_$3.dat
-  gnuplot -e "output_name='$3.png'" plot.gnu
+  gnuplot -e "input_name='output_$3.dat'; output_name='$3.png'" plot.gnu
 }
 
 echo "Downloading the test vectors..."
